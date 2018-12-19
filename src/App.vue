@@ -16,10 +16,10 @@
           :key="i"
         >
           <v-list-tile-action>
-            <v-icon v-html="item.icon"></v-icon>
+            <v-icon v-html="item.icon" class="grey--text"></v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
+            <v-list-tile-title v-text="item.title" class="grey--text"></v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -29,24 +29,15 @@
       :clipped-left="clipped"
     >
       
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
+<v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+      <v-toolbar-title  centered v-text="title" class="black--text headline "></v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
     <v-content>
       <router-view/>
     </v-content>
-    <v-navigation-drawer
-      temporary
-      :right="right"
-      v-model="rightDrawer"
-      fixed
-      app
-    >
-    </v-navigation-drawer>
+    
   </v-app>
 </template>
 
@@ -58,31 +49,31 @@ export default {
       drawer: true,
       fixed: false,
       items: [{
-        icon: 'bubble_chart',
+        icon: 'hourglass_empty',
         title: 'Années 1950', 
       },
       {
-        icon: 'bubble_chart',
+        icon: 'hourglass_empty',
         title: 'Années 1960',
       },
       {
-        icon: 'bubble_chart',
+        icon: 'hourglass_empty',
         title: 'Années 1970',
       },
       {
-        icon: 'bubble_chart',
+        icon: 'hourglass_empty',
         title: 'Années 1980',
       },
       {
-        icon: 'bubble_chart',
+        icon: 'hourglass_empty',
         title: 'Années 1990',
       },
       {
-        icon: 'bubble_chart',
+        icon: 'hourglass_empty',
         title: 'Années 2000',
       },
       {
-        icon: 'bubble_chart',
+        icon: 'hourglass_empty',
         title: 'Années 2010',
       }
       ],
