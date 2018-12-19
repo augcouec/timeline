@@ -28,7 +28,7 @@
       app
       :clipped-left="clipped"
     >
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
       </v-btn>
@@ -47,9 +47,6 @@
       app
     >
     </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
-      <span>&copy; 2019</span>
-    </v-footer>
   </v-app>
 </template>
 
@@ -62,8 +59,33 @@ export default {
       fixed: false,
       items: [{
         icon: 'bubble_chart',
-        title: 'Année 1950', 
-      }],
+        title: 'Années 1950', 
+      },
+      {
+        icon: 'bubble_chart',
+        title: 'Années 1960',
+      },
+      {
+        icon: 'bubble_chart',
+        title: 'Années 1970',
+      },
+      {
+        icon: 'bubble_chart',
+        title: 'Années 1980',
+      },
+      {
+        icon: 'bubble_chart',
+        title: 'Années 1990',
+      },
+      {
+        icon: 'bubble_chart',
+        title: 'Années 2000',
+      },
+      {
+        icon: 'bubble_chart',
+        title: 'Années 2010',
+      }
+      ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
