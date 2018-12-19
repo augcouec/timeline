@@ -22,8 +22,11 @@
     </v-navigation-drawer>
     <v-toolbar app :clipped-left="clipped">
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title centered v-text="title" class="black--text"></v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-title centered v-text="title" class="black--text headline"></v-toolbar-title>
+      <v-btn icon >
+        <v-icon color="black">filter_list</v-icon>
+      </v-btn>
     </v-toolbar>
     <v-content>
       <router-view/>
